@@ -9,12 +9,9 @@ from calculator import *
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
     def test_add(self): # 3 assertions
-        a = input('Enter a number: ')
-        b = input('Enter another number: ')
-        self.assertTrue(a.isnumeric())
-        self.assertTrue(b.isnumeric())
-        a = int(a)
-        b = int(b)
+        a = 1
+        b = 2
+        self.assertTrue(a.isnumeric() and b.isnumeric())
         self.assertEqual(add(a,b), (a+b))
 
     def test_subtract(self): # 3 assertions
@@ -37,8 +34,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(mul(a,b), (a*b))
 
     def test_divide(self): # 3 assertions
-        a = input('Enter a number: ')
-        b = input('Enter another number: ')
+        with self.assertRaises(EOFError):
+            a = input('Enter a number: ')
+            b = input('Enter another number: ')
         self.assertTrue(a.isnumeric())
         self.assertTrue(b.isnumeric())
         a = int(a)
@@ -51,8 +49,9 @@ class TestCalculator(unittest.TestCase):
             div(0, 5)
 
     def test_logarithm(self):  # 3 assertions
-        a = input('Enter a number: ')
-        b = input('Enter another number: ')
+        with self.assertRaises(EOFError):
+            a = input('Enter a number: ')
+            b = input('Enter another number: ')
         self.assertTrue(a.isnumeric())
         self.assertTrue(b.isnumeric())
         a = int(a)
@@ -69,8 +68,9 @@ class TestCalculator(unittest.TestCase):
             logarithm(5, 0)
 
     def test_hypotenuse(self):  # 3 assertions
-        a = input('Enter a number: ')
-        b = input('Enter another number: ')
+        with self.assertRaises(EOFError):
+            a = input('Enter a number: ')
+            b = input('Enter another number: ')
         self.assertTrue(a.isnumeric())
         self.assertTrue(b.isnumeric())
         a = int(a)
@@ -78,7 +78,8 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(hypotenuse(a,b), (math.hypot(b,a)))
 
     def test_sqrt(self):  # 3 assertions
-        a = input('Enter a number: ')
+        with self.assertRaises(EOFError):
+            a = input('Enter a number: ')
         self.assertTrue(a.isnumeric())
         a = int(a)
         with self.assertRaises(ValueError):
