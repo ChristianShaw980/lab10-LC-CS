@@ -11,7 +11,6 @@ class TestCalculator(unittest.TestCase):
     def test_add(self): # 3 assertions
         a = 1
         b = 2
-        self.assertTrue(a.isnumeric() and b.isnumeric())
         self.assertEqual(add(a,b), (a+b))
 
     def test_subtract(self): # 3 assertions
