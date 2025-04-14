@@ -14,32 +14,19 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(a,b), (a+b))
 
     def test_subtract(self): # 3 assertions
-        a = input('Enter a number: ')
-        b = input('Enter another number: ')
-        self.assertTrue(a.isnumeric())
-        self.assertTrue(b.isnumeric())
-        a = int(a)
-        b = int(b)
+        a = 1
+        b = 2
         self.assertEqual(subtract(a,b), (a-b))
 
     ######## Partner 1
     def test_multiply(self): # 3 assertions
-        a = input('Enter a number: ')
-        b = input('Enter another number: ')
-        self.assertTrue(a.isnumeric())
-        self.assertTrue(b.isnumeric())
-        a = int(a)
-        b = int(b)
+        a = 1
+        b = 2
         self.assertEqual(mul(a,b), (a*b))
 
     def test_divide(self): # 3 assertions
-        with self.assertRaises(EOFError):
-            a = input('Enter a number: ')
-            b = input('Enter another number: ')
-        self.assertTrue(a.isnumeric())
-        self.assertTrue(b.isnumeric())
-        a = int(a)
-        b = int(b)
+        a = 1
+        b = 2
         self.assertEqual(div(a,b), (a/b))
 
     ######## Partner 2
@@ -48,13 +35,8 @@ class TestCalculator(unittest.TestCase):
             div(0, 5)
 
     def test_logarithm(self):  # 3 assertions
-        with self.assertRaises(EOFError):
-            a = input('Enter a number: ')
-            b = input('Enter another number: ')
-        self.assertTrue(a.isnumeric())
-        self.assertTrue(b.isnumeric())
-        a = int(a)
-        b = int(b)
+        a = 1
+        b = 2
         self.assertEqual(logarithm(a,b), (math.log(b,a)))
 
     def test_log_invalid_base(self): # 1 assertion
@@ -67,13 +49,8 @@ class TestCalculator(unittest.TestCase):
             logarithm(5, 0)
 
     def test_hypotenuse(self):  # 3 assertions
-        with self.assertRaises(EOFError):
-            a = input('Enter a number: ')
-            b = input('Enter another number: ')
-        self.assertTrue(a.isnumeric())
-        self.assertTrue(b.isnumeric())
-        a = int(a)
-        b = int(b)
+        a = 1
+        b = 2
         self.assertEqual(hypotenuse(a,b), (math.hypot(b,a)))
 
     def test_sqrt(self):  # 3 assertions
