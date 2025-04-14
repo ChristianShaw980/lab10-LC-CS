@@ -1,3 +1,6 @@
+# https://github.com/ChristianShaw980/lab10-LC-CS
+# Partner 1: Leon Calef
+# Partner 2: Christian Shaw
 """
 calculator.py
 - Defines functions used to create a simple calculator
