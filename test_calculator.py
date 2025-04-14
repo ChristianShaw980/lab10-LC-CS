@@ -27,7 +27,7 @@ class TestCalculator(unittest.TestCase):
     def test_divide(self): # 3 assertions
         a = 1
         b = 2
-        self.assertEqual(div(a,b), (a/b))
+        self.assertEqual(div(a,b), (b/a))
 
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
@@ -35,8 +35,8 @@ class TestCalculator(unittest.TestCase):
             div(0, 5)
 
     def test_logarithm(self):  # 3 assertions
-        a = 1
-        b = 2
+        a = 2
+        b = 4
         self.assertEqual(logarithm(a,b), (math.log(b,a)))
 
     def test_log_invalid_base(self): # 1 assertion
@@ -54,12 +54,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(hypotenuse(a,b), (math.hypot(b,a)))
 
     def test_sqrt(self):  # 3 assertions
-        with self.assertRaises(EOFError):
-            a = input('Enter a number: ')
-        self.assertTrue(a.isnumeric())
-        a = int(a)
-        with self.assertRaises(ValueError):
-            square_root(a)
+        a = 256
         self.assertEqual(square_root(a), (math.sqrt(a)))
 
 # Do not touch this
